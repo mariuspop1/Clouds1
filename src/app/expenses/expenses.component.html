@@ -1,0 +1,123 @@
+<div class="row">
+    <div class="col-sm-6">
+        <h3>{{user.displayName}}</h3>
+        
+    </div>
+    <div class="col-sm-6 text-right">
+        <button class="btn btn-danger" (click)="expensesService.signOut()">Sign Out</button>
+    </div>
+<br>
+<br>
+<br>
+<div class="container">
+    Just the summary API works ,all the others return 0
+</div>
+<div class="container">
+    I managed to fetch the API's data into the console but I cannot filter it
+</div>
+</div>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<table id="customers">
+  <tr>
+    <th>Corona Virus Summary Worldwide</th>
+    <th></th>
+    
+  </tr>
+  <tr>
+    <td>Total Cases</td>
+    <td>47,398,111</td>
+   
+  </tr>
+  <tr>
+    <td>New Cases</td>
+    <td>445,996</td>
+    
+  </tr>
+  <tr>
+    <td>Active Cases</td>
+    <td>15,795,503</td>
+    
+  </tr>
+  <tr>
+    <td>Total Recovered</td>
+    <td>31,602,608</td>
+    
+  </tr>
+  <tr>
+    <td>New Recovered</td>
+    <td>251,315</td>
+    
+  </tr>
+  <tr>
+    <td>Recovery Rate</td>
+    <td>66,67%</td>
+    
+  </tr>
+  <tr>
+    <td>Total Deaths</td>
+    <td>1,213,657</td>
+    
+  </tr>
+  <tr>
+    <td>New Deaths</td>
+    <td>1,213,657</td>
+    
+  </tr>
+  <tr>
+    <td>Mortality Rate</td>
+    <td>2.56%</td>
+    
+  </tr>
+  
+</table>
+
+</body>
+</html>
+<div class="container"> 
+    <ejs-accumulationchart [title]='chartTitle' [legendSettings]= 'legend' [tooltip]='tooltipsettings'> 
+        <e-accumulation-series-collection> 
+            <e-accumulation-series type='Pie' [dataSource]='data' xName='name' yName='value' [dataLabel]='chartLabel' >
+
+            </e-accumulation-series>
+        </e-accumulation-series-collection>
+    </ejs-accumulationchart>
+</div>
+<div class="container"> 
+    <ejs-chart [primaryXAxis]='xAxis' [primaryYAxis]='yAxis' [title]='chartTitle1' >
+        <e-series-collection>
+            <e-series type= 'Column' fill = '#4472c4' [dataSource]='data1' xName='name' yName='value' ></e-series>
+            <e-series type= 'Column' fill = '#f2f2f2' [dataSource]='data2' xName='name' yName='value' ></e-series>
+            <e-series type= 'Column' fill = '#4CAF50' [dataSource]='data3' xName='name' yName='value' ></e-series>
+
+        </e-series-collection>
+    </ejs-chart>`
+</div>
